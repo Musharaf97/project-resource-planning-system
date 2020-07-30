@@ -1,0 +1,38 @@
+
+  <div class="container">
+    <h3>Project Details</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Status</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Win Chance (%)</th>
+          <th>No. of Resources</th>
+          <th>BL</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{project.title}}</td>
+          <td>{{project.status}}</td>
+          <td>{{project.startDate}}</td>
+          <td>{{project.endDate}}</td>
+          <td>{{project.winChance}}</td>
+          <td>{{project.noOfResources}}</td>
+          <td>{{project.bl}}</td>
+          <td>
+            <button (click)="goToEditProject(project.projectId)" class="btn btn-primary btn-xs">Edit</button> &nbsp;
+            <button class="btn btn-success btn-xs" (click)="goToAssignResource(project.projectId)">Assign Resource</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button class="btn btn-danger" (click)="gotoList()" >Back</button>
+    
+
+  
+  </div>

@@ -1,0 +1,39 @@
+<div class="container">
+    <h3>Update Assignment</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="title">Resource Visa :</label>
+            <input type="text" class="form-control" required [(ngModel)]="assignment.resource.visa" name="visa" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="title">Project :</label>
+            <input type="text" class="form-control" required [(ngModel)]="assignment.project.title" name="title" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="title">Main Role :</label>
+            <input type="text" class="form-control" required [(ngModel)]="assignment.mainRole" name="mainRole" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="title">Allotment :</label>
+            <input type="number" class="form-control" required [(ngModel)]="assignment.allotment" name="allotment">
+        </div>
+
+        <div class="form-group">
+            <label for="title">Start :</label>
+            <input type="date" class="form-control" required [(ngModel)]="assignment.startDate" name="start_date" >
+        </div>
+
+        <div class="form-group">
+            <label for="title">End :</label>
+            <input type="date" class="form-control" required [(ngModel)]="assignment.endDate" name="end_date">
+        </div>
+
+        <td><button type="submit" class="btn btn-success">Update</button></td>
+    </form>
+    <button id="cancelButton" [routerLink]="['/assignments']" class="btn btn-danger">Cancel</button>
+    <div>
+    </div>
+</div>

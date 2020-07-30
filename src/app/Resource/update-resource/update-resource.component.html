@@ -1,0 +1,51 @@
+<div class="container">
+    <h3>Update Resource</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="title">Last Name :</label>
+            <input type="text" class="form-control" required [(ngModel)]="resource.lastName" name="lastName">
+        </div>
+
+        <div class="form-group">
+            <label for="title">Status :</label>
+            <label class="container1">Active
+                <input type="radio" id="active"  name="active" required [(ngModel)]="resource.status" value="Active" >
+                <span class="checkmark"></span>
+              </label>
+              
+              <label class="container1">Not-Active
+                <input type="radio" id="notActive" required [(ngModel)]="resource.status" name="notActive" value="Not-Active">
+              </label>
+        </div>
+
+        <div class="form-group">
+            <label for="title">First Name :</label>
+            <input type="text" class="form-control" required [(ngModel)]="resource.firstName" name="firstName">
+        </div>
+
+        <div class="form-group">
+            <label for="title">Visa :</label>
+            <input type="text" class="form-control" required [(ngModel)]="resource.visa" name="visa" disabled>
+        </div>
+
+        <div class="form-group">
+            <label for="title">Level :</label>
+            <input type="number" class="form-control" required [(ngModel)]="resource.level" name="level">
+        </div>
+
+        <div class="form-group">
+            <label for="title">Profile :</label>
+            <input type="text" class="form-control" required [(ngModel)]="resource.profile" name="profile">
+        </div>
+
+        <div class="form-group">
+            <label for="title">Factory :</label>
+            <input type="text" class="form-control" required [(ngModel)]="resource.factory" name="factory">
+        </div>
+
+        <td><button type="submit" class="btn btn-success">Update</button></td>
+    </form>
+    <button id="cancelButton" [routerLink]="['/resources']" class="btn btn-danger" >Cancel</button>
+    <div>
+</div>
+</div>

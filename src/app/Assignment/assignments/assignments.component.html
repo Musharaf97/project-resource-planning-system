@@ -1,0 +1,48 @@
+<div class="container">
+    <h3>List of Assignments</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Last Name</th>
+          <th>First Name</th>
+          <th>Visa</th>
+          <th>Status</th>
+          <th>Level</th>
+          <th>Profile</th>
+          <th>Factory</th>
+          <th>Project</th>
+          <th>BL</th>
+          <th>Main Role</th>
+          <th>Main Technology</th>
+          <th>Win Chance</th>
+          <th>Assignment (%)</th>
+          <th>Start</th>
+          <th>End</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let assignment of assignments">
+          <td>{{assignment.resource.lastName}}</td>
+          <td>{{assignment.resource.firstName}}</td>
+          <td>{{assignment.resource.visa}}</td>
+          <td>{{assignment.resource.status}}</td>
+          <td>{{assignment.resource.level}}</td>
+          <td>{{assignment.resource.profile}}</td>
+          <td>{{assignment.resource.factory}}</td>
+          <td>{{assignment.project.title}}</td>
+          <td>{{assignment.project.bl}}</td>
+          <td>{{assignment.mainRole}}</td>
+          <td>{{assignment.mainTechnology.mainTechnologyName}}</td>
+          <td>{{assignment.project.winChance}}</td>
+          <td>{{assignment.allotment}}</td>
+          <td>{{assignment.startDate}}</td>
+          <td>{{assignment.endDate}}</td>
+          <td>
+            <button  class="btn btn-info btn-xs" (click)="goToViewAssignment(assignment.assignmentId)">View</button> &nbsp;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-danger" (click)="gotoList()" >Back</button>
+  </div>
+  

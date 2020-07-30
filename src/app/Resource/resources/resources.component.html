@@ -1,0 +1,32 @@
+<div class="container">
+    <h3>List of Resources</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Last Name</th>
+          <th>First Name</th>
+          <th>Visa</th>
+          <th>Level</th>
+          <th>Status</th>
+          <th>Profile</th>
+          <th>Factory</th>
+          <!-- <th>Assignment</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let resource of resources">
+          <td>{{resource.lastName}}</td>
+          <td>{{resource.firstName}}</td>
+          <td>{{resource.visa}}</td>
+          <td>{{resource.level}}</td>
+          <td>{{resource.status}}</td>
+          <td>{{resource.profile}}</td>
+          <td>{{resource.factory}}</td>
+          <td>
+            <button  class="btn btn-info btn-xs" (click)="goToViewResource(resource.resourceId)">View</button> &nbsp;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <td><button type="button" class="btn btn-success btn-sm" (click)="goToAddResource()">Add new Resource</button></td>
+  </div>

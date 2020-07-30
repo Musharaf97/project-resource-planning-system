@@ -1,0 +1,12 @@
+<div class="container">
+    <h3>Add a new Main Technology</h3>
+    <form #addprojectForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="title">Name :</label>
+            <input type="text" class="form-control" required [(ngModel)]="mainTechnology.mainTechnologyName" name="title">
+        </div>
+        <td><button type="submit" id="submitButton" class="btn btn-success">Add</button></td>
+    </form>
+
+    <button id="cancelButton" [routerLink]="['/maintechnologies']" class="btn btn-danger">Cancel</button>
+</div>

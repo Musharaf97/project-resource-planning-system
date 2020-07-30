@@ -1,0 +1,54 @@
+<div class="container">
+  <h3>Assign Resource to Project</h3>
+  <form #addprojectForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="hidden">
+      <label for="projectId">Project Id </label>
+      <input type="text" class="form-control" [(ngModel)]="assignment.project.projectId" name="projectId">
+    </div>
+
+    <div class="form-group">
+      <label for="title">Resource :</label>
+         <select class="form-control" name="resource" [(ngModel)]="assignment.resource.resourceId">
+                <option *ngFor="let resources of resource" [ngValue]="resources.resourceId">
+                     {{resources.lastName}}
+                     {{resources.firstName}}
+                     {{resources.visa}}
+                  </option>
+              </select>
+    </div>
+
+    <div class="form-group">
+      <label for="title">Start Date :</label>
+      <input type="date" class="form-control" required [(ngModel)]="assignment.startDate" name="startDate">
+    </div>
+
+    <div class="form-group">
+      <label for="title">End Date :</label>
+      <input type="date" class="form-control" required [(ngModel)]="assignment.endDate" name="endDate">
+    </div>
+
+    <div class="form-group">
+      <label for="title">Main Role :</label>
+      <input type="text" class="form-control" required [(ngModel)]="assignment.mainRole" name="mainRole">
+    </div>
+
+    <div class="form-group">
+      <label for="title">Allotment :</label>
+      <input type="number" class="form-control" required [(ngModel)]="assignment.allotment" name="allotment">
+    </div>
+
+    <div class="form-group">
+      <label for="title">Main Technology :</label>
+         <select class="form-control" name="mainTechnology" [(ngModel)]="assignment.mainTechnology.mainTechnologyId">
+                <option *ngFor="let mainTechnologies of mainTechnology" [ngValue]="mainTechnologies.mainTechnologyId">
+                    {{mainTechnologies.mainTechnologyName}}
+                  </option>
+              </select>
+    </div>
+
+    <td><button type="submit" id="submitButton" class="btn btn-success">Add</button></td>
+  </form>
+
+  <button id="cancelButton" [routerLink]="['/project']" class="btn btn-danger">Cancel</button>
+
+</div>
