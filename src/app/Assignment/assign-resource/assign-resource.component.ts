@@ -19,6 +19,7 @@ import { RpsCommunicationService } from '../../communication/project-emitter';
 })
 export class AssignResourceComponent implements OnInit {
 
+  searchResource = '';
   id: number;
   assignment: Assignment = new Assignment();
   resource: Resource;

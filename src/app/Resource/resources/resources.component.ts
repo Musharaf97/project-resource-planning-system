@@ -9,6 +9,7 @@ import { ResourceServiceService } from 'src/app/Services/Resource-Service/resour
   styleUrls: ['./resources.component.css']
 })
 export class ResourcesComponent implements OnInit {
+  searchResource = '';
   resources: any;
 
   constructor(private http: HttpClient, private _service: ResourceServiceService, private router: Router) { }

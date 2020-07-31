@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class AssignmentsComponent implements OnInit {
 
+  searchAssignment = '';
+
   assignments: any;
   constructor(private service: AssignmentService, private router: Router) { }
 

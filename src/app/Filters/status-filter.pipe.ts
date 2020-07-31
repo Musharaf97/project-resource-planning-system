@@ -4,6 +4,8 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'statusFilter'
 })
 export class StatusFilterPipe implements PipeTransform {
+
+
   // tslint:disable-next-line: ban-types
   transform(value: any, sName: string): any {
     if (sName === ''){

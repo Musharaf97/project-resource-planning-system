@@ -1,5 +1,10 @@
 <div class="container">
     <h3>List of Resources</h3>
+
+    <div class="form-group">
+
+      <input type="text" class="form-control"  name="resourceFilter" placeholder="search by visa" [(ngModel)]="searchResource">
+    </div>
     <table class="table">
       <thead>
         <tr>
@@ -14,7 +19,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let resource of resources">
+        <tr *ngFor="let resource of resources |  resourceFilter: searchResource ">
           <td>{{resource.lastName}}</td>
           <td>{{resource.firstName}}</td>
           <td>{{resource.visa}}</td>

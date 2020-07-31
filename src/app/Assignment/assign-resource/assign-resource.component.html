@@ -6,15 +6,25 @@
       <input type="text" class="form-control" [(ngModel)]="assignment.project.projectId" name="projectId">
     </div>
 
+
     <div class="form-group">
-      <label for="title">Resource :</label>
-         <select class="form-control" name="resource" [(ngModel)]="assignment.resource.resourceId">
-                <option *ngFor="let resources of resource" [ngValue]="resources.resourceId">
-                     {{resources.lastName}}
-                     {{resources.firstName}}
-                     {{resources.visa}}
-                  </option>
-              </select>
+      <label for="title" class="search">Resource : </label>
+      <table>
+        <tr>
+          <td>
+            <input type="text"  class="form-control"  name="filter" placeholder="search by visa" [(ngModel)]="searchResource" >
+          </td>
+          <td class="resource">
+               <select class="form-control" name="resource" [(ngModel)]="assignment.resource.resourceId">
+                      <option *ngFor="let resources of resource | resourceFilter: searchResource " [ngValue]=" resources.resourceId">
+                {{resources.lastName}}
+                {{resources.firstName}}
+                {{resources.visa}}
+                        </option>
+                    </select>
+          </td>
+        </tr>
+      </table>
     </div>
 
     <div class="form-group">

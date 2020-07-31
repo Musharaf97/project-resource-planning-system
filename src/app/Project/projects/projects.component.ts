@@ -18,7 +18,7 @@ export class ProjectsComponent implements OnInit {
   // tslint:disable-next-line: variable-name
   constructor(private http: HttpClient, private _service: ServicesService, private router: Router) {
 
-    this.searchProjects = 'Active';
+    // this.searchProjects = 'Active';
    }
 
   ngOnInit() {

@@ -1,5 +1,8 @@
 <div class="container">
     <h3>List of Assignments</h3>
+    <div class="form-group">
+      <input type="text" class="form-control" required [(ngModel)]="searchAssignment" name="searchAssignment">
+    </div>
     <table class="table">
       <thead>
         <tr>
@@ -21,7 +24,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let assignment of assignments">
+        <tr *ngFor="let assignment of assignments | assignmentPipe: searchAssignment ">
           <td>{{assignment.resource.lastName}}</td>
           <td>{{assignment.resource.firstName}}</td>
           <td>{{assignment.resource.visa}}</td>

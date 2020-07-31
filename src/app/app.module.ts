@@ -14,6 +14,8 @@ import { AddMaintechnologyComponent } from './Maintechnology/add-maintechnology/
 import { MainTechnologyComponent } from './Maintechnology/main-technology/main-technology.component';
 import { UpdateAssignmentComponent } from './Assignment/update-assignment/update-assignment.component';
 import { AssignmentDetailsComponent } from './Assignment/assignment-details/assignment-details.component';
+import { ResourceFilterPipe } from './Filters/resource-filter.pipe';
+import { AssignmentPipePipe } from './Filters/assignment-pipe.pipe';
 
 
 
@@ -31,7 +33,9 @@ import { AssignmentDetailsComponent } from './Assignment/assignment-details/assi
     AddMaintechnologyComponent,
     MainTechnologyComponent,
     UpdateAssignmentComponent,
-    AssignmentDetailsComponent
+    AssignmentDetailsComponent,
+    ResourceFilterPipe,
+    AssignmentPipePipe
   ],
   imports: [
     BrowserModule,
